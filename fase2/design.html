@@ -55,7 +55,15 @@
                     Un elemento que usa flexbox como diseño se conoce como contenedor flexible, y los elementos dentro de él son elementos flexibles. 
 
                 </p>
-                <p>Attardi, J. (2020). Flexbox. In Modern CSS (pp. 205-228). Apress, Berkeley, CA.</p>
+                <p>Cuando los elementos se presentan como cajas flexibles, se distribuyen con respecto a dos ejes:
+                    <li>El eje principal (main axis) es el eje que corre en la dirección en que se colocan los elementos flexibles (por ejemplo, según se disponen las filas en una página o hacia abajo según se disponen las columnas en una página). El inicio y el final de este eje se denominan inicio principal (main start) y final principal (main end).</li>
+                    <li>El eje transversal (cross axis) es el eje que corre perpendicular a la dirección en la que se colocan los elementos flexibles. El inicio y el final de este eje se denominan inicio transversal (cross start) y extremo cruzado (cross end).</li>
+                    <li>El elemento padre que tiene establecido display: flex (el elemento section en nuestro ejemplo) se llama contenedor flexible.</li>
+                    <li>Los elementos que se presentan como cajas flexibles dentro del contenedor flexible se denominan elementos flexibles (son los elementos article de nuestro ejemplo).</li>
+                </p>
+                <p>Attardi, J. (2020). Flexbox. In Modern CSS (pp. 205-228). Apress, Berkeley, CA.
+                <p>https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Flexbox</p>
+                </p>
             </article>
             <article>
                 <h4>Listas y enlaces</h4>
@@ -68,13 +76,53 @@
                     <li>Lista desordenada, ul</li>
                     <li>ordenada, ol</li>
                     <li>de definición, dl</li>
+
+                    Hay que destacar que los tipos de listas pueden combinarse entre sí,
+                    pero siempre se debe indicar la etiqueta correspondiente donde comienza la lista,
+                    donde comienza y termina cada elemento de dicha lista y finalmente, el final de la misma.
+
+                <h5>Listas desordenadas</h5>
+                <p>Las listas desordenadas van dentro de la etiqueta ul HTML y de su cierre /ul. Cada punto que queramos añadir a la lista, lo haremos dentro de la etiqueta li y su cierre.
+                    Si no le indicamos nada a la etiqueta li HTML, ésta se generará de forma automática. Pero si queremos definir nosotros mismo el símbolo del punto, podemos gracias al atributo “type”.
+                    Así podemos hacer que la lista esté definida por puntos negros (li type=”disc”), por puntos con el fondo blanco (li type=”circle”) o por cuadrados (li type=”square”). Aunque esta apariencia dependerá del navegador. Hay algunos navegadores que dan otras apariencias a estos mismos atributos.</p>
                 </p>
+                <h5>Listas ordenadas</h5>
+                <p>Las listas ordenadas van enmarcadas dentro de las etiquetas ol /ol. Cada punto de la lista se escribe con la misma etiqueta que en las no numeradas: li. Pero al ser listas ordenadas los símbolos serán números y éstos se irán generando automáticamente por orden, conforme escribamos nuevos puntos.</p>
+                <p>las listas ordenadas podemos hacer que el primer punto comience con el número que nosotros queramos. Lo conseguiremos gracias al atributo “value”. Los siguientes puntos que escribamos se generarán automáticamente por orden, partiendo de ese número.</p>
+                </p>
+                <h5>Listas de definición</h5>
+                <p>Si lo que vamos a hacer es un listado de definiciones, podemos usar las etiquetas dl, dt y dd. Vamos a explicarlas por partes:
+                <p>La etiqueta dl viene de los términos ingleses “Definiton list” y nos indica que dentro de ella, entre ella y su cierre, va a ir una definición.</p>
+                <p>La etiqueta dt viene de los términos “Definition term” y dentro de ella irá el término que vamos a definir. Para entendernos mejor, dentro de dt iría el título de la definición.</p>    
+                <p>La etiqueta dd viene de los términos “Definition description” y nos dice que dentro de ésta irá la definición.</p>   
+                </p>    
+                    
                 <h5>Los enlaces</h5>
                 <p>
                     Cualquier elemento de un documento XHTML puede ser definido como enlace.
                     Por lo tanto, imágenes, párrafos de texto o bloques pueden especificarse como enlaces
                     a otros puntos del mismo documento o de la red.
-
+                </p>
+                <h5>Estructura de los enlaces</h5>
+                <p>
+                    La estructura de un enlace está formada por la etiqueta a seguida de determinados atributos. <br>
+                    Existen varios tipos de enlaces: <br>
+                    <h5>Enlaces a páginas o documentos externos</h5>
+                    En donde con la etiqueta ref se relaciona la url de dicho sitio. <br>
+                </p>
+                <p>
+                    <h5>Enlace a un punto de la misma página</h5>
+                    Cuando se trabaja con documentos muy extensos o índices se suelen poner enlaces desde el principio del documento al final del mismo y viceversa, así agiliza la tarea al usuario que visualiza el documento.
+                </p>
+                <p>
+                    <h5>Enlaces a otras páginas locales</h5>
+                    Cuando se dispone de varias páginas en un site, es normal que se elacionen entre estas. La URL de la página o elemento a enlazar puede referenciarse de forma Relativa o Absoluta.
+                </p>
+                <p>
+                    Un enlace relativo depende de la posición de la página origen y página destino. En este tipo de enlace se suprime el protocolo y el nombre del servidor.
+                </p>
+                <p>
+                    Un enlace absoluto es aquel que no necesita información adicional para localizar el recurso enlazado. Es la ruta completa hacia dicho recurso.
                 </p>
                 <p>Cabello, J. C. O. (2006). Diseño de páginas Web con XHTML, JavaScript y CSS. Grupo Editorial RA-MA.</p>
             </article>
@@ -85,7 +133,7 @@
     <img src="img/mockup.png" alt="descripcion">
     <footer>
         Correo: wdbenitezo@unadvirtual.edu.co <br>
-        Skype: <br>
+        Skype: danielben_22@hotmail.com<br>
         Fecha: Septiembre 2021
     </footer>
 </body>
