@@ -54,10 +54,6 @@ ul, ol {
     margin:  60px;
 }
 
-img {
-    width: 220px;
-    height: 205px;
-}
 
 .contenido{
     display: flex;
@@ -91,4 +87,8 @@ footer{
 footer p{
     text-align: center;
     padding: 10px;
+}
+
+.col-md-7{
+    text-align: center;
 }

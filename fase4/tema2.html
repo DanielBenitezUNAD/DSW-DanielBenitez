@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wilson Daniel Benitez">
+    <meta name="description" content="Aprende sobre FlexBox, listas y enlaces en HTML y CSS"/>
+    <meta name="keywords" content="HTML, CSS, FlexBox, listas, enlaces, aprende, conocimiento, evaluación"/>
+    <title>Tema 2</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="container" style="background-color:#7C9473">
+        <div class="row">
+            <div class="col-10"><h1>Tema 2: Listas y Enlaces</h1></div>
+            <div class="col-2"></div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Temas
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="tema1.html">FlexBox</a></li>
+                  <li><a class="dropdown-item" href="tema2.html">Listas y Enlaces</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Recursos Digitales
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="recurso1.html">Recursos Digitales 1</a></li>
+                  <li><a class="dropdown-item" href="recurso2.html">Recursos Digitales 2</a></li>
+                  <li><a class="dropdown-item" href="recurso3.html">Recursos Digitales 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Aprendizaje
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="evaluacion1.html">Evaluación 1</a></li>
+                  <li><a class="dropdown-item" href="evaluacion2.html">Evaluación 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="autor.html">Autor</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <main class="container">
+        <div class="row">
+            <div class="col-md-8">
+              <h2>Listas y enlaces</h2>
+              <br>
+              <img src="img/Listas.png" alt="ListayEnlace"
+              width="250" height="255">
+              <p>
+                  Las listas se emplean para presentar de forma ordenada una serie de líneas.
+                  Éstas pueden ser ordenadas, desordenadas y de definición.
+
+                  <li>Lista desordenada, ul</li>
+                  <li>ordenada, ol</li>
+                  <li>de definición, dl</li>
+
+                  Hay que destacar que los tipos de listas pueden combinarse entre sí,
+                  pero siempre se debe indicar la etiqueta correspondiente donde comienza la lista,
+                  donde comienza y termina cada elemento de dicha lista y finalmente, el final de la misma.
+
+              <h5>Listas desordenadas</h5>
+              <p>Las listas desordenadas van dentro de la etiqueta ul HTML y de su cierre /ul. Cada punto que queramos añadir a la lista, lo haremos dentro de la etiqueta li y su cierre.
+                  Si no le indicamos nada a la etiqueta li HTML, ésta se generará de forma automática. Pero si queremos definir nosotros mismo el símbolo del punto, podemos gracias al atributo “type”.
+                  Así podemos hacer que la lista esté definida por puntos negros (li type=”disc”), por puntos con el fondo blanco (li type=”circle”) o por cuadrados (li type=”square”). Aunque esta apariencia dependerá del navegador. Hay algunos navegadores que dan otras apariencias a estos mismos atributos.</p>
+              </p>
+              <h5>Listas ordenadas</h5>
+              <p>Las listas ordenadas van enmarcadas dentro de las etiquetas ol /ol. Cada punto de la lista se escribe con la misma etiqueta que en las no numeradas: li. Pero al ser listas ordenadas los símbolos serán números y éstos se irán generando automáticamente por orden, conforme escribamos nuevos puntos.</p>
+              <p>las listas ordenadas podemos hacer que el primer punto comience con el número que nosotros queramos. Lo conseguiremos gracias al atributo “value”. Los siguientes puntos que escribamos se generarán automáticamente por orden, partiendo de ese número.</p>
+              </p>
+              <h5>Listas de definición</h5>
+              <p>Si lo que vamos a hacer es un listado de definiciones, podemos usar las etiquetas dl, dt y dd. Vamos a explicarlas por partes:
+              <p>La etiqueta dl viene de los términos ingleses “Definiton list” y nos indica que dentro de ella, entre ella y su cierre, va a ir una definición.</p>
+              <p>La etiqueta dt viene de los términos “Definition term” y dentro de ella irá el término que vamos a definir. Para entendernos mejor, dentro de dt iría el título de la definición.</p>    
+              <p>La etiqueta dd viene de los términos “Definition description” y nos dice que dentro de ésta irá la definición.</p>   
+              </p>
+              <h5>Enlaces</h5>
+              <p>Lo más importante de los documentos HTML son los enlaces. Ya que mediante los enlaces en HTML podemos comunicar una página con otra. De esta forma, enlazando documentos HTML podemos acabar tejiendo lo que es Internet.
+                  Para crear un enlace en HTML utilizamos el elemento A, con la siguiente sintaxis:</p>
+                  <p><i>/a Contenido del enlace /a></i></p>
+              <p>Pero solo con esto el enlace no tendrá mucha utilidad ya que el principal objetivo del enlace es enlazar a un destino. Para poder indicar el destino de un enlace utilizamos el atributo href.
+                  En valor del atributo href puede ser cualquier URI que represente un recurso. Es decir, una página, una parte de una página, una URL genérica, un archivo, etc. De esta forma el enlace en HTML lo crearemos con la sintaxis:</p>
+                  <p><i>/a href="URI">Contenido del enlace /a></i></p>
+              <h5>Título de los enlaces</h5>
+              <p>El enlace en HTML, tal y como lo hemos visto hasta ahora, sirve para enlazar contra un recurso de la web: servidor, directorio, dominio. Y lo que en mayor o menor medida describe lo que enlazamos es el contenido que encontramos entre las etiquetas A.</p>
+              <p>Si bien el elemento A nos ofrece un atributo llamado title. En el atributo title podemos describir de una forma textual el destino del enlace. Esto servirá no solo al usuario para que pueda obtener más información de dónde va,
+                  si no a las máquinas a la hora de asignar un nombre a la URI sobre la que estamos enlazando.</p>
+              <p>Un ejemplo sería:</p>
+              <p><i>/a href="http://www.cssandhtml.net" title="Web de CSS y HTML">Ir a Página Web /a></i></p>
+              <h5>Estados de un enlace CSS</h5>
+              <p>Lo primero que hay que entender es el concepto de estados de un enlace (diferentes estados en los que pueden estar los enlaces, que pueden diseñarse usando diferentes pseudoclases):</p>
+                  <li><b>Link (no visitado):</b> El estado predeterminado que presenta un enlace cuando no está en ningún otro estado. Se puede especificar usando la pseudoclase :link.</li>
+                  <li><b>Visited:</b> Un enlace cuando ya se ha visitado (está grabado en el historial del navegador); se le aplica otro formato con la pseudoclase :visited.</li>
+                  <li><b>Hover:</b> Un enlace cuando se le pasa el cursor por encima; se le aplica otro formato con la pseudoclase :hover.</li>
+                  <li><b>Focus:</b> Un enlace cuando tiene el foco (por ejemplo, se salta a este con la tecla Tab del teclado o se le da el foco mediante programación usando HTMLElement.focus()); se le aplica un formato diferente con la pseudoclase :focus.</li>
+                  <li><b>Active:</b> Un enlace cuando se activa (por ejemplo, se hace clic encima); se le aplica un formato diferente con la pseudoclase :active.</li>
+            </div>
+            <aside class="col-md-4">
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUniversidadUNAD&amp;tabs=timeline&amp;width=340&amp;height=980&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="980" style="border:none;overflow:hidden"
+              scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </aside>
+        </div>
+    </main>
+    <footer><p>wdbenitezo@unadvirtual.edu.co</p></footer>
+    
+</body>
+</html>

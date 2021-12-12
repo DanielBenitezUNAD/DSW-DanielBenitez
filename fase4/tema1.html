@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wilson Daniel Benitez">
+    <meta name="description" content="Aprende sobre FlexBox, listas y enlaces en HTML y CSS"/>
+    <meta name="keywords" content="HTML, CSS, FlexBox, listas, enlaces, aprende, conocimiento, evaluación"/>
+    <title>Tema 1</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="container" style="background-color:#7C9473">
+        <div class="row">
+            <div class="col-10"><h1>Tema 1: FlexBox</h1></div>
+            <div class="col-2"></div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Temas
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="tema1.html">FlexBox</a></li>
+                  <li><a class="dropdown-item" href="tema2.html">Listas y Enlaces</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Recursos Digitales
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="recurso1.html">Recursos Digitales 1</a></li>
+                  <li><a class="dropdown-item" href="recurso2.html">Recursos Digitales 2</a></li>
+                  <li><a class="dropdown-item" href="recurso3.html">Recursos Digitales 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Aprendizaje
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="evaluacion1.html">Evaluación 1</a></li>
+                  <li><a class="dropdown-item" href="evaluacion2.html">Evaluación 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="autor.html">Autor</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <main class="container">
+        <div class="row">
+            <div class="col-md-8">
+              <h2>FlexBox</h2>
+              <br>
+              <img src="img/FlexBox.png" alt="Flexbox"
+              width="250" height="255">
+              <p>
+                  Es una herramienta poderosa para crear diseños con CSS. No es tan poderoso como CSS Grid, pero puede resolver muchos problemas de diseño.
+                  Flexbox es un diseño unidimensional que puede colocar elementos horizontal o verticalmente (pero no ambos).
+                  Un elemento que usa flexbox como diseño se conoce como contenedor flexible, y los elementos dentro de él son elementos flexibles. 
+
+              </p>
+              <p>Cuando los elementos se presentan como cajas flexibles, se distribuyen con respecto a dos ejes:
+              <li><b>El eje principal (main axis)</b> es el eje que corre en la dirección en que se colocan los elementos flexibles (por ejemplo, según se disponen las filas en una página o hacia abajo según se disponen las columnas en una página). El inicio y el final de este eje se denominan inicio principal (main start) y final principal (main end).</li>
+              <li><b>El eje transversal (cross axis)</b> es el eje que corre perpendicular a la dirección en la que se colocan los elementos flexibles. El inicio y el final de este eje se denominan inicio transversal (cross start) y extremo cruzado (cross end).</li>
+              <li><b>El elemento padre que tiene establecido display:</b> flex (el elemento section en nuestro ejemplo) se llama contenedor flexible.</li>
+              </p>
+              <h5>Propiedades del elemento principal</h5>
+              <p>Cuando se usa el Flexbox, es muy importante saber qué propiedades se declaran en el elemento principal (por ejemplo, una div que contendrá los elementos a alinear) y cuáles se declararán en los elementos secundarios.
+                  A continuación, se muestran las propiedades que deben declararse utilizando el elemento principal como selector (para alinear los elementos secundarios):</p>
+              <p><b>Display</b>, esta propiedad define un flex container; inline o block dependiendo de los valores pasados. Coloca todos los elementos secundarios directos en un contexto Flex.</p>
+              <p><b>Flex-direction</b>, establece el eje principal, definiendo así la dirección en la que los flex ítems están alineados en el flex container. Flexbox es (con la excepción de un wrapping opcional) un concepto de diseño unidireccional.
+                  Piensa en los flex ítems inicialmente posicionaids o en líneas horizontales o en columnas verticales.</p>
+              <p><b>Flex-wrap</b>, los flex ítems todos intentarán encajarse en una sola línea. Con esta propiedad puedes modificar este comportamiento y permitir que los ítems pasen a la siguiente línea según sea necesario.</p>
+              <p><b>Flex-flow</b>, es una propiedad shorthand (una misma declaración incluye varios valores relacionados con más de una propiedad) que incluye flex-direction y flex-wrap.
+                  Determina cuáles serán los ejes principal y transversal del contenedor. El valor estándar es row nowrap.</p>
+              <p><b>Justify-content</b>, esta propiedad define la alineación de los ítems a lo largo del eje principal. Ayuda a distribuir el espacio libre que queda en el contenedor,
+                  ya sea que todos los flex ítems de una línea sean inflexibles o flexibles, pero ya hayan alcanzado su tamaño máximo. También ejerce cierto control sobre la alineación de los ítems cuando sobrepasan el límite de la línea.</p>
+                  <p> <li><b>Flex-start (estándar):</b> los ítems se alinean a lo largo del borde de inicio (start) de acuerdo con la flex-direction del contenedor.</li>
+                      <li><b>Flex-end:</b> los ítems se alinean a lo largo del borde final (end) de acuerdo con la flex-direction del contenedor.</li>
+                      <li><b>start:</b> los ítems se alinean a lo largo del borde de inicio de la dirección del writing-mode (modo de escritura).</li>
+                      <li><b>end:</b> los ítems se alinean a lo largo del borde final de la dirección del writing-mode (modo de escritura).</li>
+                      <li><b>left:</b> los ítems están alineados a lo largo del borde izquierdo del contenedor, a menos que esto no tenga sentido con el flex-direction que se está utilizando. En este caso, se comporta como start.</li>
+                      <li><b>right:</b> los ítems están alineados a lo largo del borde derecho del contenedor, a menos que esto no tenga sentido con el flex-direction que se está utilizando. En este caso, se comporta como start.</li>
+                      <li><b>center:</b> los ítems están centrados en la línea.</li></p>
+                 
+              <p><b>Align-ítems</b>, establece el comportamiento estándar de cómo flex ítems están alineados según el eje transversal (cross axis). En cierto modo, funciona de manera similar al justify-content, pero en el eje transversal (perpendicular al eje principal).</p>
+                  <p> <li><b>Stretch (estándar):</b> estira los ítems para llenar el contenedor, respetando el min-width/max-width).</li>
+                      <li><b>Flex-start/start/self-start:</b> ítems se posicionan al inicio del eje transversal. La diferencia entre ellos es sutil y se refiere a las reglas de flex-direction o writing-mode.</li>
+                      <li><b>center:</b> ítems se centran en el eje transversal.</li>
+                      <li><b>baseline:</b> ítems se alinean de acuerdo con sus baselines.</li></p>
+              <p><b>Align-content</b>, organiza las líneas dentro de un flex container cuando hay espacio adicional en el eje transversal, similar a cómo justify-content alinea ítems individuales dentro del eje principal.</p>
+                  <p> <li><b>flex-start / start:</b> ítems alineados con el inicio del contenedor. El valor (con mayor soporte de los navegadores) flex-start se guía por la flex-direction, mientras que start se guía por la dirección del writing-mode.</li>
+                      <li><b>Flex-end/end:</b> ítems alineados con el final del contenedor. El valor (con mayor soporte de los navegadores) flex-end se guía por la flex-direction, mientras que end se guía por la dirección del writing-mode.</li>
+                      <li><b>center:</b> ítems centrados en el contenedor.</li>
+                      <li><b>space-between:</b> ítems distribuidos uniformemente; la primera línea al inicio del contenedor y la última línea al final del contenedor.</li>
+                      <li><b>space-around:</b> ítems distribuidos uniformemente con el mismo espaciamiento entre cada línea.</li>
+                      <li><b>space-evenly:</b> elementos distribuidos uniformemente con el mismo espaciamiento entre ellos.</li>
+                      <li><b>stretch (estándar):</b> ítems en cada línea se estiran para ocupar el espacio remanente entre ellas.</li></p>
+              <h5>Propiedades de los elementos secundarios</h5>
+              <p>A continuación, veremos propiedades que deben declararse teniendo como selector los elementos secundarios, esto significa que, donde hay un elemento principal con propiedad flex (o flex-container),
+                  también puede asignar propiedades flex específicas a elementos secundarios (flex-ítem).</p>
+              <p><b>order</b>, determina el orden en que aparecerán los elementos (1 2 3).</p>
+              <p><b>Flex-grow</b>, define la habilidad de un flex ítem de crecer, según el caso. El valor de esta propiedad es un valor numérico sin indicación de unidad, que se utiliza para calcular la proporción.
+                  Este valor dicta la cantidad de espacio disponible en el contenedor que ocupará el ítem.</p>
+              <p><b>flex-shrink</b>, establece la habilidad de un flex ítem para contraerse, según el caso.</p>
+              <p><b>flex-basis</b>, establece el tamaño estándar de un elemento antes de que se distribuya el espacio remanente del contenedor. Puede ser un largo (por ejemplo, 20%, 5rem, etc.) o una palabra clave.
+                  La palabra clave auto significa "observe mis propiedades de altura o ancho" (lo que era hecho por la palabra clave t main-size, que fue depreciada). La palabra clave content significa "establezca el tamaño según el contenido interno del ítem";
+                  esta palabra clave aún no tiene mucho soporte, por lo que no es fácil de probar, al igual que sus relacionadas: max-content, min-content y fit-content.</p>
+              <p><b>flex</b>, esta es la propiedad shorthand para flex-grow, flex-shrink y flex-basis, combinadas. El segundo y tercer parámetros (flex-shrink y flex-basis) son opcionales. El estándar es 0 1 auto, pero si lo defines con un solo número, es equivalente a 0 1.</p>
+              <p><b>align-self</b>, permite que la alineación estándar (o lo que esté definido por align-items) se sobrescriba para ítems individuales.</p>
+              <p></p>
+            </div>
+            <aside class="col-md-4">
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUniversidadUNAD&amp;tabs=timeline&amp;width=340&amp;height=980&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="980" style="border:none;overflow:hidden"
+              scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </aside>
+        </div>
+    </main>
+    <footer><p>wdbenitezo@unadvirtual.edu.co</p></footer>
+    
+</body>
+</html>
